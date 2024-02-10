@@ -1,0 +1,12 @@
+ps: 4th-sustainable transportation
+proposed solution: an application which helps the driver(user) to do predictive driving and servicing and fuel saving reminders to improve fuel efficiency and reduced fuel consumption.
+unique features: 
+1. provides suggestions on optimum speed for the vehicle based on vehicle model and the road conditions and traffic ahead.
+2. provides reminders for reduction in fuel consumption like suggesting turning off engine when the car has been stationary for a while.
+3. provides best route to avoid traffic in rush hour, hence reducing fuel consumption.
+4. gives servicing reminders based on car model and car usage data.
+
+Tech stack: Python
+            Kivy
+            MySQL
+            Git
