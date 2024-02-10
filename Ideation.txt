@@ -13,3 +13,15 @@ Tech stack: Python
 Future Scope: The app not only will contribute in tackling environment challenges by reducing pollution emission and fuel consumption of vehicles, it will also cut expenditure on fuel by optimizing vehicle usage.
 Moreover, the best route feature helps save time while driving. 
 As more people switch to e-vehicles in future, the app will continue to be useful by modifications to adapting electricity as fuel.
+
+Featues:
+login page*: user email-id
+             password
+user details*: user phone-number
+               user address
+               user vehicle type
+               user vehicle model
+               user vehicle number
+start journey button:initiates predictive driving
+notification: on/off switch
+              alert message with accept/reject
