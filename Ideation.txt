@@ -10,3 +10,6 @@ Tech stack: Python
             Kivy
             MySQL
             Git
+Future Scope: The app not only will contribute in tackling environment challenges by reducing pollution emission and fuel consumption of vehicles, it will also cut expenditure on fuel by optimizing vehicle usage.
+Moreover, the best route feature helps save time while driving. 
+As more people switch to e-vehicles in future, the app will continue to be useful by modifications to adapting electricity as fuel.
