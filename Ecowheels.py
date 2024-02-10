@@ -11,9 +11,18 @@ from kivy.uix.pagelayout import PageLayout
 from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.properties import StringProperty
+from kivy.uix.screenmanager import ScreenManager, Screen
 
 #for login page
-class EcoWheelWidgets(Widget):
+class EntryChoice(Screen):
+    pass
+class Registration(Screen):
+    pass
+
+class Login(Screen):
+    pass
+
+class WindowManager(ScreenManager):
     pass
 
 class EcoWheelsApp(MDApp):
@@ -24,5 +33,12 @@ class EcoWheelsApp(MDApp):
     def clear(self):
         self.root.ids.user.text = ""
         self.root.ids.password.text = ""
+        return None
+    '''def switch_screen(self):
+        screen_manager = self.root.ids.screen_manager
+        current_screen = screen_manager.current
+        if current_screen == 'screen1':
+            screen_manager.current = 'screen2'
+        else: screen_manager.current = 'screen1'''
 
 EcoWheelsApp().run()
