@@ -1,6 +1,7 @@
 WindowManager:
     EntryChoice:
     Registration:
+    Your_Details:
     Login:
 <EntryChoice>
     name: "entry_choice"
@@ -46,6 +47,7 @@ WindowManager:
         MDTextField:
             id: user
             hint_text: "username"
+            mode: "rectangle"
             required: True
             helper_text: "Enter your username here"
             helper_text_mode: "on_focus"
@@ -57,6 +59,7 @@ WindowManager:
         MDTextField:
             id: password
             hint_text: "Password"
+            mode: "rectangle"
             required: True
             helper_text: "Enter your password here"
             helper_text_mode: "on_focus"
@@ -71,15 +74,79 @@ WindowManager:
             text: "Continue"
             font_size: 12
             pos_hint: {"center_x": 0.5}
-            on_release: app.root.current = "login_page"
-
+            on_release: app.root.current = "Your_Details"
         MDRoundFlatButton:
             text: "CLEAR"
             font_size: 12
             pos_hint: {"center_x": 0.5}
             on_press: app.clear()
 
-<Login>
+<Your_Details>:
+    name: "Your_Details"
+    Image:
+        source: "car_backdrop.jpg"
+    MDLabel:
+        id: welcome_label
+        text: "Before move on, take a moment to fill up the following details"
+        font_size: 40
+        halign: 'center'
+        height: self.texture_size[1]
+        pos_hint: {"center_y": 0.8}
+    
+    MDTextField:
+        id: email
+        hint_text: "Email Address"
+        required: True
+        helper_text: "Enter your email address here"
+        helper_text_mode: "on_focus"
+        icon_right: "email"
+        width: 200
+        font_size: 20
+        pos_hint: {"center_x": 0.5, "center_y": 0.7}
+
+    MDTextField:
+        id: phone
+        hint_text: "Phone_Number"
+        required: True
+        helper_text: "Enter your 10 digit here"
+        helper_text_mode: "on_focus"
+        icon_right: "phone"
+        width: 200
+        font_size: 20
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+    MDTextField:
+        id: text_field
+        hint_text: "Country of Origin"
+        required: True
+        helper_text: "Enter your country name here"
+        helper_text_mode: "on_focus"
+        width: 200
+        font_size: 20
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    MDTextField:
+        id: text_field
+        hint_text: "Vehicle Type"
+        required: True
+        helper_text: "Example: Write 'Car' if you own a car"
+        helper_text_mode: "on_focus"
+        width: 200
+        font_size: 20
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+    MDTextField:
+        id: text_field
+        hint_text: "Model Number"
+        required: True
+        helper_text: "Enter your vehicle's model number here"
+        helper_text_mode: "on_focus"
+        width: 200
+        font_size: 20
+        pos_hint: {"center_x": 0.5, "center_y": 0.3}
+    MDRoundFlatButton:
+        text: "Login"
+        font_size: 30
+        pos_hint: {"center_x": 0.5, "center_y": 0.2}
+        on_release:app.root.current = "login_page"
+<Login>:
     name: "login_page"
     MDCard: 
         size_hint: None, None
@@ -99,6 +166,7 @@ WindowManager:
         MDTextField:
             id: user
             hint_text: "username"
+            mode: "rectangle"
             required: True
             helper_text: "Enter your username here"
             helper_text_mode: "on_focus"
@@ -110,6 +178,7 @@ WindowManager:
         MDTextField:
             id: password
             hint_text: "Password"
+            mode: "rectangle"
             required: True
             helper_text: "Enter your password here"
             helper_text_mode: "on_focus"
