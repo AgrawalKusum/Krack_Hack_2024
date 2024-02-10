@@ -6,19 +6,25 @@ WindowManager:
     name: "entry_choice"
     MDCard:
         size_hint: None, None
-        size: 500, 500
+        size: 400, 400
         pos_hint: {"center_x": 0.5, "center_y":0.5}
         elevation: 5 
         orientation: 'vertical'
+        FitImage:
+            id: bg_image
+            source: "car_backdrop.jpg"
+            size_hint_y: 1
+            size_hint_x: 1
+            pos_hint: {"top": 1}
         MDRoundFlatButton:
             text: "Registration"
-            font_size: 12
-            pos_hint: {"center_x": 0.5}
+            font_size: 30
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
             on_release:app.root.current = "registration_page"
         MDRoundFlatButton:
             text: "Login"
-            font_size: 12
-            pos_hint: {"center_x": 0.5}
+            font_size: 30
+            pos_hint: {"center_x": 0.5, "center_y": 0.75}
             on_release:app.root.current = "login_page"
 
 <Registration>:
@@ -29,7 +35,6 @@ WindowManager:
         pos_hint: {"center_x": 0.5, "center_y":0.5}
         elevation: 5 
         orientation: 'vertical'
-    
         MDLabel:
             id: welcome_label
             text: "WELCOME TO ECOWHEELS"
