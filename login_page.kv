@@ -1,8 +1,11 @@
+#include navbar.kv
+
 WindowManager:
     EntryChoice:
     Registration:
     Your_Details:
     Login:
+    Homescreen:
 <EntryChoice>
     name: "entry_choice"
     MDCard:
@@ -193,9 +196,21 @@ WindowManager:
             text: "LOG IN"
             font_size: 12
             pos_hint: {"center_x": 0.5}
-
+            on_release: app.root.current="Homescreen"
         MDRoundFlatButton:
             text: "CLEAR"
             font_size: 12
             pos_hint: {"center_x": 0.5}
             on_press: app.clear()
+
+<Homescreen>:
+    name: "Homescreen"
+    Image:
+        source: "car_backdrop.jpg"
+    BoxLayout:
+        orientation: "vertical"
+        MDTopAppBar:
+            type: "top"
+            title: "Welcome to HomeScreen"
+            right_action_items: [["dots-vertical", lambda x: app.callback()],["home", lambda x: app.callback(x), "Home", "Home"],["notification", lambda x: app.callback(x), "Notification", "Bell"],]
+            evation: 5
